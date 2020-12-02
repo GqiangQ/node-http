@@ -11,7 +11,7 @@ server.on('request',(request:IncomingMessage,response:ServerResponse) => {
   } )
   request.on('end',() =>{
     const body = Buffer.concat(array).toString();
-    response.end('hi')
+    response.end(body )
   })
 }); 
 server.listen(8888,()=>{
